@@ -1,0 +1,83 @@
+:root {
+  --color-bg: #535353aa;
+  --color-bg-hover: #878787aa;
+  --color-bg-focus: #eeeeee;
+  --color-text: white;
+  --color-icon: #888;
+
+  --nav-items-size: 40px;
+}
+
+/* Nav and links */
+nav {
+  width: 100%;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 0;
+}
+
+.home-link {
+  display: flex;
+  align-items: center;
+  width: var(--nav-items-size);
+  height: var(--nav-items-size);
+  padding: 2px;
+  justify-content: center;
+  flex-shrink: 0;
+  background-color: var(--color-bg);
+  border-radius: 50%;
+  transition: background-color 0.2s, filter 0.2s;
+}
+
+.home-link:hover {
+  filter: drop-shadow(0 0 0.15rem var(--color-bg-focus));
+  box-shadow: 0 0 0 1px var(--color-bg-focus);
+}
+
+/* Search wrapper */
+.search-wrapper {
+  height: var(--nav-items-size);
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  background-color: var(--color-bg);
+  width: 50%;
+  transition: box-shadow 0.2s, background-color 0.3s;
+  cursor: text;
+}
+
+/* Hover or focus highlights */
+.search-wrapper:hover,
+.search-wrapper:focus-within {
+  background-color: var(--color-bg-hover);
+}
+
+/* Focus outline */
+.search-wrapper:focus-within {
+  box-shadow: 0 0 0 2px var(--color-bg-focus);
+}
+
+/* Input styling */
+.search-wrapper > input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--color-text);
+  padding-left: 32px;
+  padding: 4px 8px;
+}
+
+/* Icon styling */
+.search-wrapper .search-icon {
+  pointer-events: none;
+  color: var(--color-icon);
+}
+
+.external-wrapper {
+  display: flex;
+  gap: 20px;
+}

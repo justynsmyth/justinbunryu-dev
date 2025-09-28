@@ -1,0 +1,30 @@
+a .external-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.external-link-label {
+  position: absolute;
+  left: 50px; /* distance from icon */
+  background-color: #222;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity 0.2s, transform 0.2s;
+  pointer-events: none; /* so label itself doesn’t block hover */
+}
+
+.external-link:hover .external-link-label {
+  opacity: 1;
+  transform: translateY(-25%) translateX(0);
+}
+
+@media (max-width: 800px) {
+  .external-link-label {
+    display: none; /* hide label entirely */
+  }
+}
