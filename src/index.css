@@ -54,11 +54,6 @@ button {
   transition: border-color 0.25s;
 }
 
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
 .button-javascript:hover {
   border-color: var(--color-javascript);
   box-shadow: 0 0 8px var(--color-javascript);

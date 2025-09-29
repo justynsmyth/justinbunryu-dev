@@ -14,7 +14,9 @@ nav {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 5px 20px;
+  padding: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-sizing: border-box; /* ensures border includes padding in layout */
 }
 
 .nav-center {
