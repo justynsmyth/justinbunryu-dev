@@ -9,3 +9,10 @@ export type InternalLinkProps = Readonly<{
   targetId: string
   label?: string
 }>;
+
+export type SkillData = {
+  name: string
+  type: string
+  tags: string[]
+  color?: string
+}

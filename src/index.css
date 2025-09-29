@@ -12,6 +12,17 @@
   --color-text: white;
   --color-icon: #888;
 
+  --color-javascript: #f0db4f;
+  --color-react: #61dafb;
+  --color-python: #306998;
+  --color-cpp: #00599c;
+  --color-html-css: #e34c26;
+  --color-devtools: #6e5494;
+  --color-golang: #00add8;
+  --color-csharp: #239120;
+  --color-mysql: #00758f;
+  --color-lua: #000080;
+
   --nav-items-size: 40px;
 
   font-synthesis: none;
@@ -32,9 +43,9 @@ h1 {
 }
 
 button {
-  border-radius: 8px;
+  border-radius: 10px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  padding: 0.5em 0.8em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
@@ -42,12 +53,60 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
-}
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.button-javascript:hover {
+  border-color: var(--color-javascript);
+  box-shadow: 0 0 8px var(--color-javascript);
+}
+
+.button-react:hover {
+  border-color: var(--color-react);
+  box-shadow: 0 0 8px var(--color-react);
+}
+
+.button-python:hover {
+  border-color: var(--color-python);
+  box-shadow: 0 0 8px var(--color-python);
+}
+
+.button-cpp:hover {
+  border-color: var(--color-cpp);
+  box-shadow: 0 0 8px var(--color-cpp);
+}
+
+.button-html-css:hover {
+  border-color: var(--color-html-css);
+  box-shadow: 0 0 8px var(--color-html-css);
+}
+
+.button-devtools:hover {
+  border-color: var(--color-devtools);
+  box-shadow: 0 0 8px var(--color-devtools);
+}
+
+.button-golang:hover {
+  border-color: var(--color-golang);
+  box-shadow: 0 0 8px var(--color-golang);
+}
+
+.button-csharp:hover {
+  border-color: var(--color-csharp);
+  box-shadow: 0 0 8px var(--color-csharp);
+}
+
+.button-mysql:hover {
+  border-color: var(--color-mysql);
+  box-shadow: 0 0 8px var(--color-mysql);
+}
+
+.button-lua:hover {
+  border-color: var(--color-lua);
+  box-shadow: 0 0 8px var(--color-lua);
 }
 
 @media (prefers-color-scheme: light) {

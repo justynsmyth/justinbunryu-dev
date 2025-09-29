@@ -1,5 +1,5 @@
 import { ExternalLinkProps } from "../types/types"
-import "./Link.css"
+import "../css/Link.css"
 
 export default function ExternalLink({children, href, label}:ExternalLinkProps) {
     return (

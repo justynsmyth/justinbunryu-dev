@@ -13,15 +13,16 @@ export default function InternalLink({ children, targetId, label }: InternalLink
     }
 
     return (
-        <a href={`#${targetId}`} onClick={handleClick} aria-label={label} className="internal-link">
+        <a href={`#${targetId}`} onClick={handleClick} aria-label={label} className="link">
             {children}
+            {label && <span className="link-label">{label}</span>}
         </a>
     )
   }
 
   // Not on homepage
   return (
-    <Link to={`/#${targetId}`} aria-label={label} className="internal-link">
+    <Link to={`/#${targetId}`} aria-label={label} className="link">
       {children}
     </Link>
   )

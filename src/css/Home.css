@@ -1,0 +1,122 @@
+p,
+h1,
+span {
+  margin: 0;
+}
+
+.unselectable {
+  user-select: none; /* standard */
+  -webkit-user-select: none; /* Safari/Chrome */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE/Edge */
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  min-height: 100vh;
+}
+
+.page-wrapper > * {
+  flex: 0 0 auto; /* no grow or shrink vertically */
+  max-width: 600px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* About Section  */
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.about-section-label {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #a1a1a1;
+  letter-spacing: 1px;
+}
+
+.about-section {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.about-section > p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.intro {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.name {
+  color: #1565c0;
+  font-weight: 750;
+}
+
+.logo {
+  width: 22.5px;
+}
+
+.icon {
+  color: rgb(252, 98, 98);
+}
+
+.target-positions {
+  display: flex;
+}
+
+.location,
+.education,
+.target-positions {
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.target-positions .highlight {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  font-weight: 600;
+}
+
+.bubble-blue,
+.bubble-purple {
+  display: inline-flex;
+  flex: 0 0 auto;
+  border-radius: 4px;
+  padding: 3px;
+}
+
+.bubble-blue {
+  background-color: rgba(109, 101, 251, 0.369);
+}
+
+.bubble-purple {
+  background-color: rgba(13, 0, 250, 0.369);
+}
+
+/* Skill Section */
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.skill-bubble-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
