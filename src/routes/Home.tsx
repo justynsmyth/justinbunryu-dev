@@ -8,30 +8,29 @@ import "./Home.css"
 
 const Home = () => {
     return (
-        <>        
-            <span> About Me </span>
-            <section className="about-section">
+        <div className="page-wrapper">
+            <div className="about-container">
+                <span className="about-section-label unselectable"> About Me </span>
+                <section className="about-section unselectable">
                 <p className="intro">
                     Hi, I'm <span className="name">Justin Bunryu Smith</span>
                 </p>
-
                 <p className="location">
                     <IoLocationOutline className="icon" />
                     Windermere, FL
                 </p>
-
                 <p className="education">
                     <LiaUniversitySolid className="icon" />
                     Computer Science, University of Michigan
                     <img
-                        src={MichiganLogo}
-                        alt="University of Michigan Logo"
-                        className="logo"
+                    src={MichiganLogo}
+                    alt="University of Michigan Logo"
+                    className="logo"
                     />
                 </p>
-            </section>
-        </>
-        
+                </section>
+            </div>
+        </div>
     )
 }
 

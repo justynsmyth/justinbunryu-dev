@@ -6,6 +6,13 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
+  --color-bg: #535353aa;
+  --color-bg-hover: #878787aa;
+  --color-bg-focus: #eeeeee;
+  --color-text: white;
+  --color-icon: #888;
+
+  --nav-items-size: 40px;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,11 +22,8 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: var(--color-text);
   text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
 }
 
 h1 {

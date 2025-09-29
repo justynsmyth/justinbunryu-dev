@@ -1,5 +1,5 @@
 import { ExternalLinkProps } from "../types/types"
-import "./ExternalLink.css"
+import "./Link.css"
 
 export default function ExternalLink({children, href, label}:ExternalLinkProps) {
     return (
@@ -7,11 +7,11 @@ export default function ExternalLink({children, href, label}:ExternalLinkProps) 
             href={href}
             target="_blank" 
             rel="noopener noreferrer"
-            className="external-link home-link"
+            className="link"
             aria-label={label}
             >
             {children}
-            {label && <span className="external-link-label">{label}</span>}
+            {label && <span className="link-label">{label}</span>}
         </a>
     )
 }

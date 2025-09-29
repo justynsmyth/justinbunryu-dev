@@ -1,10 +1,28 @@
-a .external-link {
+a .link {
   position: relative;
   display: flex;
   align-items: center;
 }
 
-.external-link-label {
+.link {
+  display: flex;
+  align-items: center;
+  width: var(--nav-items-size);
+  height: var(--nav-items-size);
+  padding: 2px;
+  justify-content: center;
+  flex-shrink: 0;
+  background-color: var(--color-bg);
+  border-radius: 50%;
+  transition: background-color 0.2s, filter 0.2s;
+}
+
+.link:hover {
+  filter: drop-shadow(0 0 0.15rem var(--color-bg-focus));
+  box-shadow: 0 0 0 1px var(--color-bg-focus);
+}
+
+.link-label {
   position: absolute;
   left: 50px; /* distance from icon */
   background-color: #222;
@@ -18,13 +36,13 @@ a .external-link {
   pointer-events: none; /* so label itself doesn’t block hover */
 }
 
-.external-link:hover .external-link-label {
+.link:hover .link-label {
   opacity: 1;
   transform: translateY(-25%) translateX(0);
 }
 
 @media (max-width: 800px) {
-  .external-link-label {
+  .link-label {
     display: none; /* hide label entirely */
   }
 }

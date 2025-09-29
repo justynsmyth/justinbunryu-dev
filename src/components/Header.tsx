@@ -1,12 +1,10 @@
 // import reactLogo from "./assets/react.svg";
 // import viteLogo from "/vite.svg";
 import "./Header.css";
-import { useRef } from "react"
 import ExternalLink from "./ExternalLink"
-
+import InternalLink from "./InternalLink"
 { ` All react icons `}
 import { GoHome } from "react-icons/go";
-import { IoIosSearch } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 
@@ -21,22 +19,22 @@ const COLOR: string = "gray"
 
 export default function Header() {
 
-    const inputRef = useRef<HTMLInputElement>(null)
-
-    function openSearch() {
-        inputRef.current?.focus()
-    }
-
     return (
         <>
             <nav>
-                <Link to="/" className="home-link">
+                <Link to="/" className="link">
                     <GoHome color={COLOR} size={ICONSIZE_M} />
                 </Link>
-                <div className="search-wrapper" onClick={openSearch}>
-                    <IoIosSearch className="search-icon" size={ICONSIZE_M} aria-hidden="true" />
-                    <input type="search" ref={inputRef} placeholder="Search" aria-label="Search" />
+
+                <div className="internal-wrapper">
+                    <InternalLink targetId="projects" label="Projects">
+                        Projects
+                    </InternalLink>
+                    <InternalLink targetId="experiences" label="Experiences">
+                        Experiences
+                    </InternalLink>
                 </div>
+
                 <div className="external-wrapper">
                     <ExternalLink href="https://github.com/justynsmyth" label="GitHub">
                         <FaGithub color={COLOR} size={ICONSIZE_M} aria-hidden="true"/>
