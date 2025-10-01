@@ -27,3 +27,10 @@ export interface ProjectData {
   githubUrl?: string;
   liveUrl?: string;
 }
+
+export type ProjectFilterContextType = {
+  activeSkill: string | null;
+  setActiveSkill: (s: string | null) => void;
+  activeCategory: string; // ALL is default
+  setActiveCategory: (c: string) => void;
+};

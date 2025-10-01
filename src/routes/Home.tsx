@@ -4,36 +4,17 @@ import { Link } from 'react-router-dom';
 import SectionHeader from '../components/SectionHeader';
 import Projects from '../components/Projects';
 
+import { ProjectFilterContextProvider } from '../context/ProjectFilterContext';
+import ProjectFilters from '../components/ProjectFilters';
+
 import { IoLocationOutline } from 'react-icons/io5';
 import { LiaUniversitySolid } from 'react-icons/lia';
 import { LuLightbulb } from 'react-icons/lu';
 
-import { SkillData } from '../types/types';
-
-import skillsData from '../data/skills.json';
-
 import MichiganLogo from '../assets/Block_M-Hex.png';
 import '../css/Home.css';
-import clsx from 'clsx';
 
 const Home = () => {
-  const skills: SkillData[] = skillsData.skills;
-  const [activeSkill, setActiveSkill] = useState<string | null>(null);
-
-  // Create skill components
-  const skillBubbles = skills.map((skill: SkillData, index: number) => {
-    const color = skill.color || 'golang';
-    const isActive = activeSkill === skill.name;
-    return (
-      <button
-        key={skill.name}
-        className={clsx(`button-${color}`, { active: isActive })}
-        onClick={() => setActiveSkill(skill.name)}
-      >
-        {skill.name}
-      </button>
-    );
-  });
   const helloArray = ['こんにちは', 'Hi', 'Heyo', 'Greetings', 'Hello', 'Howdy'];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [displayText, setDisplayText] = useState('');
@@ -70,8 +51,9 @@ const Home = () => {
     }
   }, [textIndex, currentIndex]);
 
+  /* if we decide to create projects as a route, elevate Context to layout*/
   return (
-    <>
+    <ProjectFilterContextProvider>
       <div className="page-wrapper">
         <div className="about-container">
           <SectionHeader> About Me </SectionHeader>
@@ -103,24 +85,10 @@ const Home = () => {
             </p>
           </section>
         </div>
-        <div className="skills-container">
-          <SectionHeader> Skills </SectionHeader>
-          <p className="skills-instruction">Click a skill to filter projects</p>
-          <div className="skill-bubble-container">{skillBubbles}</div>
-
-          <div className="skill-reset-container">
-            <button
-              className={clsx('reset-button', { hidden: !activeSkill })}
-              onClick={() => setActiveSkill(null)}
-              aria-hidden={!activeSkill}
-            >
-              Reset Filter
-            </button>
-          </div>
-        </div>
+        <ProjectFilters />
       </div>
-      <Projects skillFilter={activeSkill} />
-    </>
+      <Projects />
+    </ProjectFilterContextProvider>
   );
 };
 

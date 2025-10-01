@@ -1,64 +1,26 @@
-.projects-header {
-  flex: 0 0 auto;
-  max-width: 750px;
-  width: 100%;
+/* ===== Projects Layout ===== */
+.projects-container {
+  padding: 2rem;
+}
+
+.projects-grid {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin: 0 auto;
-}
-
-/* Filter buttons */
-.filter-container {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
-  justify-content: center;
-  padding: 20px;
-  width: 700px;
-  margin: auto 0;
-}
-
-.filter-button {
-  padding: 0.5rem 1.5rem;
-  border: 2px solid var(--primary-color, #4a90e2);
-  background: transparent;
-  color: var(--primary-color, #4a90e2);
-  border-radius: 20px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.filter-button:hover {
-  background: var(--primary-color, #4a90e2);
-  color: white;
-  transform: translateY(-2px);
-}
-
-.filter-button.active {
-  background: var(--primary-color, #4a90e2);
-  color: white;
-}
-
-/* Projects grid */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
-  justify-content: center; /* center single items */
+  align-items: center; /* center the cards horizontally */
 }
 
-/* Project card */
+/* ===== Project Card ===== */
 .project-card {
+  display: flex;
+  flex-direction: column; /* default: stacked on mobile */
+  width: 100%;
+  max-width: 1000px; /* hot dog constraint */
   background: var(--card-background, #f8f9fa);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
 }
 
 .project-card:hover {
@@ -66,6 +28,7 @@
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* ===== Project Image ===== */
 .project-image-container {
   width: 100%;
   height: 200px;
@@ -84,7 +47,7 @@
   transform: scale(1.05);
 }
 
-/* Project content */
+/* ===== Project Content ===== */
 .project-content {
   padding: 1.5rem;
   display: flex;
@@ -108,6 +71,9 @@
 }
 
 .tech-tag {
+  padding: 0.5em 0.8em;
+  font-family: inherit;
+  background-color: #1a1a1a;
   padding: 0.25rem 0.75rem;
   border-radius: 12px;
   font-size: 0.875rem;
@@ -173,7 +139,7 @@
   transform: translateY(-2px);
 }
 
-/* No projects message */
+/* ===== No projects message ===== */
 .no-projects {
   text-align: center;
   color: var(--text-secondary, #5a6c7d);
@@ -181,24 +147,10 @@
   margin-top: 3rem;
 }
 
-/* Responsive adjustments */
+/* ===== Responsive adjustments ===== */
 @media (max-width: 768px) {
   .projects-container {
     padding: 1rem;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .filter-container {
-    gap: 0.5rem;
-  }
-
-  .filter-button {
-    padding: 0.4rem 1rem;
-    font-size: 0.9rem;
   }
 
   .project-title {
@@ -206,22 +158,18 @@
   }
 }
 
-/* Dark mode support (optional) */
-@media (prefers-color-scheme: dark) {
+@media (min-width: 1024px) {
   .project-card {
-    background: var(--card-background-dark, #2d3748);
-  }
-
-  .project-title {
-    color: var(--text-primary-dark, #e2e8f0);
-  }
-
-  .project-description,
-  .project-highlights {
-    color: var(--text-secondary-dark, #cbd5e0);
+    flex-direction: row; /* image + content side by side */
   }
 
   .project-image-container {
-    background: var(--image-background-dark, #1a202c);
+    width: 40%;
+    height: auto;
+  }
+
+  .project-content {
+    width: 60%;
+    padding: 1.5rem;
   }
 }

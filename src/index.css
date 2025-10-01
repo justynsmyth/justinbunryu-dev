@@ -42,6 +42,7 @@ h1 {
   line-height: 1.1;
 }
 
+/* ==================== BUTTON BASE STYLES ==================== */
 button {
   border-radius: 10px;
   border: 1px solid transparent;
@@ -51,9 +52,10 @@ button {
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: border-color 0.25s, box-shadow 0.25s, transform 0.3s, opacity 0.3s;
 }
 
+/* ==================== BUTTON HOVER STATES ==================== */
 .button-javascript:hover {
   border-color: var(--color-javascript);
   box-shadow: 0 0 8px var(--color-javascript);
@@ -104,65 +106,63 @@ button {
   box-shadow: 0 0 8px var(--color-lua);
 }
 
+/* ==================== BUTTON ACTIVE STATES ==================== */
 .button-javascript.active {
   background: var(--color-javascript);
   color: rgb(0, 0, 0);
+  transform: scale(1.05);
 }
 
 .button-react.active {
   background: var(--color-react);
   color: rgb(0, 0, 0);
+  transform: scale(1.05);
 }
 
 .button-python.active {
   background: var(--color-python);
   color: rgb(255, 255, 255);
+  transform: scale(1.05);
 }
 
 .button-cpp.active {
   background: var(--color-cpp);
   color: white;
+  transform: scale(1.05);
 }
 
 .button-html-css.active {
   background: var(--color-html-css);
   color: white;
+  transform: scale(1.05);
 }
 
 .button-devtools.active {
   background: var(--color-devtools);
   color: white;
+  transform: scale(1.05);
 }
 
 .button-golang.active {
   background: var(--color-golang);
   color: white;
+  transform: scale(1.05);
 }
 
 .button-csharp.active {
   background: var(--color-csharp);
   color: white;
+  transform: scale(1.05);
 }
 
 .button-mysql.active {
   background: var(--color-mysql);
   color: white;
+  transform: scale(1.05);
 }
 
 .button-lua.active {
   background: var(--color-lua);
   color: white;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+  transform: scale(1.05);
 }

@@ -4,34 +4,24 @@ import { ProjectData } from '../types/types';
 import projectsData from '../data/projects.json';
 import '../css/Projects.css';
 
+import { useProjectFilter } from '../context/ProjectFilterContext';
+
 const Projects = () => {
   const projects: ProjectData[] = projectsData.projects;
-  const [filter, setFilter] = useState<string>('all');
-
-  // Extract unique categories from projects
-  const categories = ['all', ...new Set(projects.flatMap((p) => p.categories))];
+  const { activeSkill, activeCategory } = useProjectFilter();
 
   // Filter projects based on selected category
-  const filteredProjects =
-    filter === 'all' ? projects : projects.filter((p) => p.categories.includes(filter));
+  let filteredProjects = projects;
+  if (activeCategory !== 'all') {
+    filteredProjects = projects.filter((p) => p.categories.includes(activeCategory));
+  }
+  if (activeSkill) {
+    filteredProjects = filteredProjects.filter((p) => p.technologies.includes(activeSkill));
+  }
 
   return (
     <>
       <div className="projects-container">
-        {/* Filter buttons */}
-        <SectionHeader className="projects-header">Projects</SectionHeader>
-        <div className="filter-container">
-          {categories.map((category) => (
-            <button
-              key={category}
-              className={`filter-button ${filter === category ? 'active' : ''}`}
-              onClick={() => setFilter(category)}
-            >
-              {category.charAt(0).toUpperCase() + category.slice(1)}
-            </button>
-          ))}
-        </div>
-
         {/* Projects grid */}
         <div className="projects-grid">
           {filteredProjects.map((project, index) => (
@@ -54,7 +44,7 @@ const Projects = () => {
                 {/* Tech stack */}
                 <div className="tech-stack">
                   {project.technologies.map((tech, i) => (
-                    <span key={i} className={`tech-tag button-${tech.toLowerCase()}`}>
+                    <span key={i} className={`tech-tag`}>
                       {tech}
                     </span>
                   ))}
