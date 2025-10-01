@@ -11,25 +11,29 @@ span {
   -ms-user-select: none; /* IE/Edge */
 }
 
+.section-header {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
+  font-weight: bold;
+  display: block;
+}
+
 .page-wrapper {
   margin-top: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 25px;
-  min-height: 100vh;
-}
-
-.page-wrapper > * {
-  flex: 0 0 auto; /* no grow or shrink vertically */
-  max-width: 600px;
-  width: 100%;
-  box-sizing: border-box;
 }
 
 /* About Section  */
 
-.about-container {
+.about-container,
+.skills-container {
+  flex: 0 0 auto;
+  max-width: 750px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -76,7 +80,6 @@ span {
 }
 
 .cursor {
-  display: inline-block;
   width: 2px;
   animation: blink 1s step-start infinite;
   color: var(--color-text);
@@ -142,24 +145,66 @@ span {
   background-color: rgba(13, 0, 250, 0.369);
 }
 
-/* Skill Section */
-.skills-container {
-  display: flex;
-  gap: 15px;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
 .skill-bubble-container {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 10px;
+  max-width: 95%;
 }
 
-.projects-link {
-  border-radius: 4px;
-  padding: 4px;
-  background-color: #1565c0;
+.skill-bubble-container button.active {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.skill-bubble-container button {
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.skill-reset-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.reset-button {
+  padding: 0.5rem 1.5rem;
+  border: 2px solid #e74c3c;
+  background: transparent;
+  color: #e74c3c;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9rem;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.reset-button:hover {
+  background: #e74c3c;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(231, 76, 60, 0.3);
+}
+
+.reset-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(231, 76, 60, 0.3);
+}
+
+.reset-button.hidden {
+  opacity: 0;
+  pointer-events: none; /* still prevents clicks */
+}
+
+.skills-instruction {
+  margin-left: 25px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-secondary, #5a6c7d);
+  margin-bottom: 0.5rem;
 }

@@ -10,13 +10,13 @@
 
 /* Nav and links */
 nav {
-  position: relative; /* needed for absolute positioning of center */
+  position: relative; /* for absolute positioning of center */
   display: flex;
   align-items: center;
   width: 100%;
   padding: 15px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  box-sizing: border-box; /* ensures border includes padding in layout */
+  box-sizing: border-box;
 }
 
 .nav-center {
@@ -31,13 +31,13 @@ nav {
 .nav-left {
   display: flex;
   gap: 20px;
-  flex: 0 0 auto; /* only takes width of its children */
+  flex: 0 0 auto;
   align-items: center;
 }
 
 @media (max-width: 800px) {
   .link-label {
-    display: none; /* hide label entirely */
+    display: none;
   }
 }
 

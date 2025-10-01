@@ -104,6 +104,56 @@ button {
   box-shadow: 0 0 8px var(--color-lua);
 }
 
+.button-javascript.active {
+  background: var(--color-javascript);
+  color: rgb(0, 0, 0);
+}
+
+.button-react.active {
+  background: var(--color-react);
+  color: rgb(0, 0, 0);
+}
+
+.button-python.active {
+  background: var(--color-python);
+  color: rgb(255, 255, 255);
+}
+
+.button-cpp.active {
+  background: var(--color-cpp);
+  color: white;
+}
+
+.button-html-css.active {
+  background: var(--color-html-css);
+  color: white;
+}
+
+.button-devtools.active {
+  background: var(--color-devtools);
+  color: white;
+}
+
+.button-golang.active {
+  background: var(--color-golang);
+  color: white;
+}
+
+.button-csharp.active {
+  background: var(--color-csharp);
+  color: white;
+}
+
+.button-mysql.active {
+  background: var(--color-mysql);
+  color: white;
+}
+
+.button-lua.active {
+  background: var(--color-lua);
+  color: white;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

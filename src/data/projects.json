@@ -1,0 +1,43 @@
+{
+  "projects": [
+    {
+      "title": "Portfolio Website",
+      "description": "Personal portfolio showcasing projects and skills with modern React architecture",
+      "technologies": ["React", "TypeScript", "CSS"],
+      "categories": ["web", "frontend"],
+      "highlights": [
+        "Built custom typewriter animation effect",
+        "Implemented responsive design for mobile and desktop",
+        "Created reusable component architecture"
+      ],
+      "image": "/path/to/portfolio-screenshot.png",
+      "githubUrl": "https://github.com/yourusername/portfolio",
+      "liveUrl": "https://yourportfolio.com"
+    },
+    {
+      "title": "Game Project Example",
+      "description": "A 2D platformer game with custom physics engine and level editor",
+      "technologies": ["C++", "OpenGL", "SDL"],
+      "categories": ["game", "graphics"],
+      "highlights": [
+        "Implemented collision detection system",
+        "Created level editor with drag-and-drop functionality",
+        "Optimized rendering to maintain 60 FPS"
+      ],
+      "image": "/path/to/game-screenshot.png",
+      "githubUrl": "https://github.com/yourusername/game-project"
+    },
+    {
+      "title": "Backend API Service",
+      "description": "RESTful API service for managing user data with authentication",
+      "technologies": ["Go", "PostgreSQL", "Docker"],
+      "categories": ["backend", "web"],
+      "highlights": [
+        "Designed database schema for efficient queries",
+        "Implemented JWT authentication",
+        "Containerized with Docker for easy deployment"
+      ],
+      "githubUrl": "https://github.com/yourusername/api-service"
+    }
+  ]
+}
