@@ -25,16 +25,10 @@
       "color": "cpp"
     },
     {
-      "name": "HTML & CSS",
+      "name": "HTML+CSS",
       "type": "Web Development",
       "tags": ["Tailwind"],
       "color": "html-css"
-    },
-    {
-      "name": "Dev Tools",
-      "type": "Tools",
-      "tags": ["Git", "Jira", "Docker", "VTune Profiler"],
-      "color": "devtools"
     },
     {
       "name": "Golang",

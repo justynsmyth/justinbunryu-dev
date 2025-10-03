@@ -35,6 +35,15 @@ nav {
   align-items: center;
 }
 
+.nav-right {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  gap: 20px;
+  align-items: center;
+}
+
 @media (max-width: 800px) {
   .link-label {
     display: none;

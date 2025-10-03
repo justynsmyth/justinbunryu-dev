@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 
 import SectionHeader from '../components/SectionHeader';
 import Projects from '../components/Projects';

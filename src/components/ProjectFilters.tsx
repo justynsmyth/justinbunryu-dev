@@ -11,7 +11,8 @@ import clsx from 'clsx';
 
 export default function ProjectFilters() {
   const skills: SkillData[] = skillsData.skills;
-  const { activeSkill, setActiveSkill, activeCategory, setActiveCategory } = useProjectFilter();
+  const { activeSkill, setActiveSkill, activeCategory, setActiveCategory, setSearchParams } =
+    useProjectFilter();
 
   // Create skill components
   const skillBubbles = skills.map((skill: SkillData, index: number) => {
@@ -21,7 +22,10 @@ export default function ProjectFilters() {
       <button
         key={skill.name}
         className={clsx(`button-${color}`, { active: isActive })}
-        onClick={() => setActiveSkill(skill.name)}
+        onClick={() => {
+          setActiveSkill(skill.name);
+          setSearchParams({ skill: skill.name });
+        }}
       >
         {skill.name}
       </button>
@@ -51,22 +55,28 @@ export default function ProjectFilters() {
     <>
       <div className="skills-container">
         <SectionHeader> Skills </SectionHeader>
-        <p className="skills-instruction">Click a skill to filter projects</p>
-        <div className="bubble-container">{skillBubbles}</div>
-
-        <div className="skill-reset-container">
-          <button
-            className={clsx('reset-button', { hidden: !activeSkill })}
-            onClick={() => setActiveSkill(null)}
-            aria-hidden={!activeSkill}
-          >
-            Reset Filter
-          </button>
+        <div className="skills-header">
+          <div className="skills-instruction">Click a skill to filter projects</div>
+          <div className="skill-reset-container">
+            <button
+              className={clsx('reset-button', { hidden: !activeSkill })}
+              onClick={() => {
+                setActiveSkill(null);
+                setSearchParams({});
+              }}
+              aria-hidden={!activeSkill}
+            >
+              Reset Filter
+            </button>
+          </div>
         </div>
+        <div className="bubble-container">{skillBubbles}</div>
       </div>
       <div className="filter-container">
         <SectionHeader>Projects</SectionHeader>
-        <p className="skills-instruction">Click a category to filter projects</p>
+        <div className="skills-header">
+          <p className="skills-instruction">Click a category to filter projects</p>
+        </div>
         <div className="bubble-container">{categoryBubbles}</div>
       </div>
     </>

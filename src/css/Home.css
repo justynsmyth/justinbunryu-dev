@@ -166,15 +166,8 @@ span {
   transition: all 0.3s ease;
 }
 
-.skill-reset-container {
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
 .reset-button {
-  padding: 0.5rem 1.5rem;
+  padding: 0.25rem 0.75rem;
   border: 2px solid #e74c3c;
   background: transparent;
   color: #e74c3c;
@@ -203,10 +196,23 @@ span {
   pointer-events: none; /* still prevents clicks */
 }
 
+.skills-header {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
 .skills-instruction {
   margin-left: 25px;
   text-align: center;
   font-size: 0.9rem;
   color: var(--text-secondary, #5a6c7d);
-  margin-bottom: 0.5rem;
+}
+
+.skill-reset-container {
+  display: flex;
+  justify-content: center;
 }

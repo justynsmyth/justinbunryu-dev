@@ -1,42 +1,242 @@
 {
-  "projects": [
-    {
-      "title": "Portfolio Website",
-      "description": "Single Page Application (SPA) portfolio",
-      "technologies": ["React", "React Router", "TypeScript", "CSS"],
-      "categories": ["web", "frontend"],
-      "highlights": [
-        "Built custom typewriter animation effect",
-        "Implemented responsive design for mobile and desktop",
-        "Created reusable component architecture"
-      ],
-      "githubUrl": "https://github.com/yourusername/portfolio",
-      "liveUrl": "https://yourportfolio.com"
-    },
-    {
-      "title": "Game Project Example",
-      "description": "A 2D platformer game with custom physics engine and level editor",
-      "technologies": ["C++", "OpenGL", "SDL"],
-      "categories": ["game", "graphics"],
-      "highlights": [
-        "Implemented collision detection system",
-        "Created level editor with drag-and-drop functionality",
-        "Optimized rendering to maintain 60 FPS"
-      ],
-      "image": "/path/to/game-screenshot.png",
-      "githubUrl": "https://github.com/yourusername/game-project"
-    },
-    {
-      "title": "Backend API Service",
-      "description": "RESTful API service for managing user data with authentication",
-      "technologies": ["Go", "PostgreSQL", "Docker"],
-      "categories": ["backend", "web"],
-      "highlights": [
-        "Designed database schema for efficient queries",
-        "Implemented JWT authentication",
-        "Containerized with Docker for easy deployment"
-      ],
-      "githubUrl": "https://github.com/yourusername/api-service"
-    }
+    "projects": [
+        {
+            "title": "Portfolio Website",
+            "startDate": "2025-09",
+            "endDate" : "present",
+            "description": "Single Page Application (SPA) portfolio",
+            "technologies": [
+                "React",
+                "React Router",
+                "TypeScript",
+                "HTML+CSS"
+            ],
+            "categories": [
+                "Web"
+            ],
+            "highlights": [
+                "Implemented responsive design for mobile and desktop",
+                "Reusable component architecture"
+            ],
+            "githubUrl": "https://github.com/justynsmyth/portfolio-react"
+        },
+        {
+            "title": "Custom 2D Game Engine",
+            "startDate": "2024-01",
+            "endDate" : "2024-06",
+            "description": "Multi-platform Unity style Game Engine (250+ commits) ",
+            "technologies": [
+                "C++",
+                "OpenGL",
+                "SDL",
+                "Lua",
+                "LuaBridge",
+                "VTune Profiler"
+            ],
+            "categories": [
+                "game",
+                "backend"
+            ],
+            "highlights": [
+                "OSX, Windows, Linux support",
+                "Custom collision detection system for accurate gameplay physics",
+                "Lua scripting language support",
+                "OpenGL functionality for VR Tool support using SteamVR SDK",
+                "cache-utilization + performance using data-oriented programming"
+            ],
+            "images": [
+                "/GameEngine2.png"
+            ],
+            "githubUrl": "https://github.com/justynsmyth/Tsukuro",
+            "videoDemos": [
+                "https://www.youtube.com/watch?v=SoDKWItulzM",
+                "https://www.youtube.com/watch?v=APmMv-3v4Zo"
+            ],
+            "featured": true
+        },
+        {
+            "title": "Duck and Run",
+            "startDate": "2025-04",
+            "endDate": "2025-04",
+            "description": "2 Player Ragdoll Physics Game",
+            "technologies": [
+                "C#",
+                "Unity",
+                "Jira"
+            ],
+            "categories": [
+                "game"
+            ],
+            "highlights": [
+                "2 Week Game Jam",
+                "Input Action System for controller support",
+                "Custom Ragdoll Logic"
+            ],
+            "images": [
+                "/p2_gold.png"
+            ],
+            "githubUrl": "https://github.com/justynsmyth/duck_and_run_unity",
+            "videoDemos": [
+                "/duck-and-run.mp4"
+            ]
+        },
+        {
+            "title": "Zelda NES Remake",
+            "startDate": "2025-02",
+            "endDate": "2025-02",
+            "description": "classic 8-bit zelda dungeon with custom portal gun and companion cube",
+            "technologies": [
+                "C#",
+                "Unity",
+                "Jira"
+            ],
+            "categories": [
+                "game"
+            ],
+            "highlights": [
+                "2 Person Project, focusing on projectiles and weapons"
+            ],
+            "images": [
+                "/zeldaScreen.png"
+            ],
+            "githubUrl": "https://github.com/justynsmyth/eecs494_p1"
+        },
+        {
+            "title": "Dueler's Providence",
+            "startDate": "2025-05",
+            "endDate": "2025-06",
+            "description": "5 person team PvE Souls-like game with a custom parry system and custom skinned-mesh slicer",
+            "technologies": [
+                "C#",
+                "Unity",
+                "Jira"
+            ],
+            "categories": [
+                "game"
+            ],
+            "highlights": [
+                "designed 2 custom map levels",
+                "Created Skinned Mesh Slicer capable of slicing 1000+ triangles and vertices asynchronously (Github)"
+            ],
+            "images": [
+                "/sword-1.png",
+                "/sword-2.png",
+                "/sword-map1.png",
+                "/sword-map2.png",
+                "/sword-tool.png",
+                "/sword-slice.mp4"
+            ],
+            "externalURL": "https://aksheyd.itch.io/providence",
+            "videoDemos": [
+                "https://www.youtube.com/watch?v=Tsy3BGMl7y0"
+            ],
+            "githubUrl": "https://github.com/justynsmyth/Providence_Slicer",
+            "featured": true
+        },
+        {
+            "title": "A2-Go: Pokemon Go Clone",
+            "startDate": "2023-10",
+            "endDate": "2023-11",
+            "description": "2 person team project to plant trees across campus",
+            "technologies": [
+                "C#",
+                "AR",
+                "Unity",
+                "Jira",
+                "MapBox API"
+            ],
+            "categories": [
+                "game"
+            ],
+            "highlights": [
+                "using a university bus tracking API as a game feature",
+                "MapBox API and Augemented Reality for game interaction"
+            ],
+            "videoDemos": [
+                "https://www.youtube.com/watch?v=VsGm_ErYbZY"
+            ]
+        },
+        {
+            "title": "Drummvr VR Accessibility Project",
+            "startDate": "2023-11",
+            "endDate": "2023-12",
+            "description": "4 person team project for Muscular Dystrophy Patients to play drum set",
+            "technologies": [
+                "C++",
+                "VR",
+                "Unreal Engine",
+                "Jira",
+                "Blueprints"
+            ],
+            "categories": [
+                "game"
+            ],
+            "highlights": [
+                "Created a FL Studio MIDI to Unreal Engine tool for music layout"
+            ],
+            "images": [
+                "/drummvr.mp4"
+            ]
+        },
+        {
+  "title": "Multi-Threaded Pizza Delivery Service Simulator",
+  "startDate": "2025-01",
+  "endDate": "2025-01",
+  "description": "Simulates a pizza delivery system using C++ threads for drivers, customers, and a manager. Handles concurrent order assignments and delivery tracking.",
+  "technologies": [
+    "C++",
+    "Multithreading",
+    "Mutex",
+    "Condition Variables",
+    "OS"
+  ],
+  "categories": [
+    "Backend"
+  ],
+  "highlights": [
+    "Shared mutex synchronization for Drivers and Customers",
+    "Mesa style monitor system when using condition variables"
   ]
+},
+{
+      "title": "Custom User-Level Thread Library (Multi-core)",
+      "startDate": "2025-02",
+      "endDate": "2025-02",
+      "description": "Implemented a multi-core user-level threading library in C++ using ucontext.",
+      "technologies": [
+        "C++",
+        "ucontext",
+        "Multithreading",
+        "CV and Mutexes",
+        "OS"
+      ],
+      "categories": [
+        "backend"
+      ],
+      "highlights": [
+            "CPU scheduler with timer interrupts",
+            "Manual context switching with Linux `ucontext`",
+            "Multi-CPU simulation",
+            "Atomic operations with interrupt guards"
+        ],
+      "featured": true
+    },
+    {
+  "title": "Virtual Memory Pager",
+  "startDate": "2025-03",
+  "endDate": "2025-04",
+  "description": "Implemented a virtual memory pager that simulates OS memory management, including page allocation, eviction, copy-on-write, and file-backed/swap-backed pages for multiple processes.",
+  "technologies": ["C++", "File I/O", "Data Structures", "OS"],
+  "categories": ["backend"],
+  "highlights": [
+    "custom clock-based page eviction",
+    "file-backed and swap-backed pages with copy-on-write semantics",
+    "Simulated multi-process shared pages",
+    "Handled page faults, page allocation, and swap file I/O"
+  ],
+  "featured": true
+}
+
+
+    ]
 }
