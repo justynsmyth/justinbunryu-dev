@@ -27,7 +27,6 @@ const router = createBrowserRouter(
   ],
   { basename: '/portfolio-react' } // This is to inform Github-pages to use a basepath as an absolute starting position in Github URL
 );
-
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router} />
