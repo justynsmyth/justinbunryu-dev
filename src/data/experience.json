@@ -1,0 +1,59 @@
+{
+  "experience": [
+    {
+      "title": "B.S. Computer Science",
+      "organization": "University of Michigan",
+      "location": "Ann Arbor, MI",
+      "startDate": "August 2021",
+      "endDate": "May 2025",
+      "highlights": [
+        "DSA, Intro to Cybersecurity, Operating Systems, GPU Parallel Programming, Distributed Systems, Computer Vision",
+        "Awards/Honors: Honors Distinction, Ruth Lobdell Scholarship (Academic), Everett Learnard Science Award"
+      ]
+    },
+    {
+      "title": "AGV-Interaction and Mass Evacuation Testbed Developer",
+      "organization": "Boeing, Interaction and Collaboration Research Lab",
+      "location": "Ann Arbor, MI",
+      "startDate": "May 2024",
+      "endDate": "July 2025",
+      "highlights": [
+        "Unreal Engine / C++: Developed two testbeds — a mass evacuation and a worker-AGV interaction testbed in VR. Optimized navigation system by 30%. Built a synthetic agent system with Behavior Trees to simulate worker behavior and crowd interactions with an autonomous vehicle in industrial environments.",
+        "Leveraged Remote Procedure Calls for server-client communication. Integrated ONNX Runtime within the testbed to run neural networks with custom Blender assets and eHMI vehicle animations based on model trajectory predictions.",
+        "Python / JS / HTML / CSS: Created a web application to enable interaction with a dynamic UI display and data recording."
+      ]
+    },
+    {
+      "title": "Summer IT Intern and Web Developer",
+      "organization": "Level 9 Communications",
+      "location": "Sanford, FL (Remote)",
+      "startDate": "June 2022",
+      "endDate": "August 2022",
+      "highlights": [
+        "Python, Shell Scripting: Automated routine package downloads for clients. Performed remote security tests to monitor, troubleshoot, and support IT assets remotely. Conducted virtual machine leverage tests before deployment.",
+        "React: Integrated RESTful API with a team to display documentation and video tutorials on the company's internal onboarding website."
+      ]
+    },
+    {
+      "title": "Engineering Intern, Robotic Systems Maintenance",
+      "organization": "Dana Incorporated",
+      "location": "Humboldt, TN",
+      "startDate": "June 2022",
+      "endDate": "July 2022",
+      "highlights": [
+        "Reprogrammed and reduced downtime for welding machines to increase daily quota by 5%."
+      ]
+    },
+    {
+      "title": "Drone Inventory Management, Koppers Sponsor Computer Vision Team",
+      "organization": "University of Michigan",
+      "location": "Galesburg, IL",
+      "startDate": "January 2023",
+      "endDate": "January 2025",
+      "highlights": [
+        "Python: Led computer vision sub-team for object detection (YOLO) and custom character recognition model (97% accuracy) to reduce manual railroad tie inventory",
+        "Node.js: Developed a web application integrating GPS zone tracking to aid drone navigation as part of the final deliverable."
+      ]
+    }
+  ]
+}

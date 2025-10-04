@@ -81,3 +81,13 @@ export type ProjectFilterContextType = {
   searchParams: URLSearchParams;
   setSearchParams: any;
 };
+
+export interface ExperienceData {
+  title: string;
+  organization: string;
+  location: string;
+  startDate: string;
+  endDate: string;
+  description?: string;
+  highlights?: string[];
+}

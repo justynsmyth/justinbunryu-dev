@@ -46,9 +46,9 @@ export default function Header() {
           <InternalLink targetId="projects" label="Projects">
             <BsLaptop color={COLOR} size={ICONSIZE_S} aria-hidden="true" />
           </InternalLink>
-          <InternalLink targetId="experiences" label="Experiences">
+          <Link to="/experience" className="link">
             <PiSuitcaseSimpleLight color={COLOR} size={ICONSIZE_M} aria-hidden="true" />
-          </InternalLink>
+          </Link>
           <ExternalLink href="https://github.com/justynsmyth" label="GitHub">
             <FaGithub color={COLOR} size={ICONSIZE_M} aria-hidden="true" />
           </ExternalLink>

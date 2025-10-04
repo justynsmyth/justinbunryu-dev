@@ -43,12 +43,6 @@
       "color": "csharp"
     },
     {
-      "name": "MySQL",
-      "type": "Database",
-      "tags": ["SQL", "Relational Database", "CRUD", "Joins"],
-      "color": "mysql"
-    },
-    {
       "name": "Lua",
       "type": "Language",
       "tags": ["Game Development", "Scripting"],

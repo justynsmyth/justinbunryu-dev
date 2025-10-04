@@ -191,7 +191,7 @@
     "OS"
   ],
   "categories": [
-    "Backend"
+    "backend"
   ],
   "highlights": [
     "Shared mutex synchronization for Drivers and Customers",
@@ -235,8 +235,94 @@
     "Handled page faults, page allocation, and swap file I/O"
   ],
   "featured": true
+},
+{
+  "title": "Primary-Backup Key-Value Store",
+  "startDate": "2024-10",
+  "endDate": "2024-10",
+  "description": "Implemented a fault-tolerant distributed key-value store using a primary-backup replication model with a view service to manage roles",
+  "technologies": ["Golang", "RPC", "Concurrency", "Channels", "Distributed Systems"],
+  "categories": ["backend"],
+  "highlights": [
+    "operation cache to store client operations and ensure idempotency across retries.",
+    "ViewServer handling server failures, promotions, and view transitions automatically.",
+    "RPCs for synchronizing backup state and forwarding writes from primary to backup.",
+    "Monitor server liveness and ensure backup readiness before processing client requests."
+  ]
+},
+{
+  "title": "KVPaxos",
+  "startDate": "2024-10",
+  "endDate": "2024-11",
+  "description": "Implemented a Key-Value store using Paxos for distributed consensus",
+  "technologies": ["Golang", "Distributed Systems", "Paxos"],
+  "categories": ["backend"],
+  "highlights": [
+    "Managed Paxos consensus across multiple nodes",
+    "Ensured consistency and duplication prevention across distributed clients"
+  ],
+  "featured": true
+},
+{
+  "title": "Distributed Sharded Key-Value Store",
+  "startDate": "2024-11",
+  "endDate": "2024-12",
+  "description": "Implemented a fault-tolerant, sharded key-value store using Paxos for consensus.",
+  "technologies": ["Golang", "Paxos", "RPC", "Concurrency", "Distributed Systems", "Goroutine"],
+  "categories": ["backend"],
+  "highlights": [
+    "Implemented shard assignment and shard redistribution across groups according to configurations.",
+    "ShardMaster to coordinate shard assignments and maintain configuration history with Paxos consensus.",
+    "Ensured eventual consistency and fault-tolerance by applying operations through Paxos and maintaining client and shard state across replicas.",
+    "Added logging with ANSI colors to track operations, warnings, and shard assignments for easier debugging in a distributed environment."
+  ],
+  "featured": true
+},
+{
+  "title": "Instagram + Search Engine Client-Side",
+  "startDate": "2023-10",
+  "endDate": "2023-12",
+  "description": "Implemented Instagram with a built in Search Engine; Uses a Flask REST API.",
+  "technologies": ["React", "JavaScript", "Flask", "REST API", "SQLite", "HTML+CSS", "TF-IDF", "PageRank", "MapReduce"],
+  "categories": ["frontend"],
+  "highlights": [
+    "Implemented likes and comments with instant UI updates (no reloads)",
+    "Added infinite scroll to fetch additional posts",
+    "auto-refresh time stamps",
+    "Handled authentication state with redirects",
+    "Implemented a simple search engine using TF-IDF and PageRank algorithms"
+  ],
+  "images": ["/insta1.png", "/insta2.png"]
+},
+{
+  "title": "ZoeDAM: Zero-Shot Monocular Depth Perception Model",
+  "startDate": "2022-08",
+  "endDate": "2024-04",
+  "description": "Research project under OpenMI, a University of Michigan machine learning organization. Developed ZoeDAM, a novel zero-shot depth estimation model that extends ZoeDepth by incorporating Depth Anything’s training methodology with a DINOv2 encoder. Achieved improved depth accuracy through teacher-student distillation and unlabeled dataset augmentation.",
+  "technologies": ["Python", "PyTorch", "Vision Transformers", "ZoeDepth", "Depth Anything", "DenseDepth"],
+  "categories": ["Computer Vision"],
+  "highlights": [
+    "Improved depth estimation RMSE from ZoeDepth’s 0.270 to 0.206 by combining ZoeDepth’s encoder-decoder with Depth Anything’s approach.",
+    "Designed ZoeDAM with a DINOv2 encoder initialized using DAM checkpoints, enhancing robustness.",
+    "Implemented ZoeDAM+ to leverage pseudo-depth labels from unlabeled datasets (BDD100K, LSUN) via teacher-student training.",
+    "Used strong perturbations and CutMix augmentations to improve generalization on unseen data."
+  ],
+    "externalURL" : "https://drive.google.com/file/d/1qYlCRZmg7wHBMRoKK4gctfxWeBFOul-i/view?usp=sharing",
+    "featured": true
+},
+{
+  "title": "AniRef-YOLOv8: Anime Character Detection and Reference Extraction",
+  "startDate": "2022-01",
+  "endDate": "2022-03",
+  "description": "Developed an AI-powered toolchain that helps artists extract reference images from anime videos",
+  "technologies": ["YOLOv8", "DeepDanbooru", "Real-ESRGAN", "Gradio", "Python", "PyTorch"],
+  "categories": ["Computer Vision"],
+  "highlights": [
+    "Trained YOLOv8 models on 10K manually annotated anime images (40K with augmentation) for character detection.",
+    "Integrated DeepDanbooru tagging and Real-ESRGAN upscaling for high-quality reference extraction.",
+    "Achieved up to 52.9 mAP@50–95 on test set"
+  ],
+  "githubUrl" : "https://github.com/SoulflareRC/AniRef-yolov8"
 }
-
-
     ]
 }
