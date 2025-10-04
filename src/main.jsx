@@ -5,6 +5,10 @@ import './index.css';
 
 {
   /* All Route and Components */
+  /* When ready to deploy after updating:
+  git push
+  npm run deploy
+  */
 }
 import Header from './components/Header';
 import Home from './routes/Home';
