@@ -7,6 +7,7 @@ import './index.css';
   /* All Route and Components */
   /* When ready to deploy after updating:
   git push
+  npm run build
   npm run deploy
   */
 }
