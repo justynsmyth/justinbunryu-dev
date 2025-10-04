@@ -31,7 +31,7 @@ const COLOR: string = 'gray';
 export default function Header() {
   return (
     <>
-      <nav>
+      <nav className="nav-bar">
         {/* Left: , Email */}
         <div className="nav-left">
           <CopyLink link="jbusmith@umich.edu">

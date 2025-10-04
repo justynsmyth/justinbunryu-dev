@@ -43,6 +43,15 @@
   font-size: 0.85rem;
 }
 
+@media (max-width: 480px) {
+  .project-card.featured::before {
+    top: 10px; /* closer to top */
+    right: 10px; /* closer to right */
+    font-size: 0.7rem; /* smaller text */
+    padding: 2px 6px; /* smaller badge */
+  }
+}
+
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);

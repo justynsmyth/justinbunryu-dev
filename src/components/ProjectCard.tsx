@@ -97,6 +97,7 @@ export default function ProjectCard({ project, index }: { project: ProjectData; 
               autoPlay
               muted
               loop
+              playsInline
               className="project-media"
             />
           ) : (

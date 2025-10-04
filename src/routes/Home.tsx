@@ -80,8 +80,10 @@ const Home = () => {
             <p className="target-positions">
               <LuLightbulb className="icon" />
               Prospective Entry Level
-              <span className="highlight bubble-blue">Software Engineer</span>
-              <span className="highlight bubble-purple">Game Developer</span>
+              <div className="target-position-bubbles">
+                <span className="highlight bubble-blue">Software Engineer</span>
+                <span className="highlight bubble-purple">Game Developer</span>
+              </div>
             </p>
           </section>
         </div>
