@@ -56,7 +56,6 @@ a .link {
 .copy-link-wrapper {
   display: flex;
   align-items: center;
-  gap: 8px;
   max-width: 250px;
 }
 

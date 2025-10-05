@@ -35,7 +35,7 @@ export default function Header() {
         {/* Left: , Email */}
         <div className="nav-left">
           <CopyLink link="jbusmith@umich.edu">
-            <MdOutlineEmail color={COLOR} size={ICONSIZE_S} aria-hidden="true" />
+            <MdOutlineEmail color={COLOR} size={ICONSIZE_M} aria-hidden="true" />
           </CopyLink>
         </div>
         {/* Center: Home, Projects, Experiences, GitHub, LinkedIn */}
