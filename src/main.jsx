@@ -1,6 +1,6 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
 import './index.css';
 
 {
@@ -22,6 +22,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: 'experience', element: <Experience /> },
+      { path: '*', element: <Navigate to="/" replace /> },
     ],
   },
 ]);
