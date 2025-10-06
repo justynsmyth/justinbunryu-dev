@@ -72,6 +72,12 @@
   display: block;
 }
 
+@media (max-width: 600px) {
+  .project-media {
+    object-fit: contain;
+  }
+}
+
 .project-image {
   width: 100%;
   height: 100%;

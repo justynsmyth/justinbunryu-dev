@@ -6,7 +6,7 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-  --color-bg: #535353aa;
+  --color-bg: #242424;
   --color-bg-hover: #878787aa;
   --color-bg-focus: #eeeeee;
   --color-text: white;
@@ -33,6 +33,12 @@
   --text-secondary: #000000;
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    color: white;
+  }
+}
+
 a {
   font-weight: 500;
   color: var(--color-text);
@@ -55,6 +61,7 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s, box-shadow 0.25s, transform 0.3s, opacity 0.3s;
+  color: #fff;
 }
 
 /* ==================== BUTTON HOVER STATES ==================== */
