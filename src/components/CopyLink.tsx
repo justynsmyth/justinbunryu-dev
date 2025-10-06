@@ -24,7 +24,6 @@ export default function CopyLink({ children, link, hoverHint }: CopyLinkProps) {
       <button onClick={handleClick} className="link">
         {children}
       </button>
-      <span className="email-text">{copied ? 'Copied!' : hoverHint ?? link}</span>
     </div>
   );
 }

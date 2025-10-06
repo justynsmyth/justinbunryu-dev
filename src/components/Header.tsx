@@ -7,6 +7,8 @@ import CopyLink from './CopyLink';
 import DownloadFile from './DownloadFile';
 import { useProjectFilter } from '../context/ProjectFilterContext';
 import HoverAction from './HoverAction';
+import { HoverContext } from './HoverAction';
+import { useContext } from 'react';
 
 {
   ` All react icons `;
@@ -42,6 +44,7 @@ export default function Header() {
     }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+  const { isHovering } = useContext(HoverContext);
 
   return (
     <>
@@ -49,14 +52,12 @@ export default function Header() {
         {/* Left: , Email */}
         <div className="nav-left">
           <HoverAction>
-            {(isHovering) => (
-              <CopyLink
-                link="jbusmith@umich.edu"
-                hoverHint={isHovering ? 'Click to copy email' : undefined}
-              >
-                <MdOutlineEmail color={COLOR} size={ICONSIZE_M} />
-              </CopyLink>
-            )}
+            <CopyLink
+              link="jbusmith@umich.edu"
+              hoverHint={isHovering ? 'Click to copy email' : undefined}
+            >
+              <MdOutlineEmail color={COLOR} size={ICONSIZE_M} />
+            </CopyLink>
           </HoverAction>
         </div>
         {/* Center: Home, Projects, Experiences, GitHub, LinkedIn */}
@@ -67,7 +68,7 @@ export default function Header() {
           </Link>
           <InternalLink targetId="projects" label="Projects">
             <BsLaptop color={COLOR} size={ICONSIZE_S} aria-hidden="true" />
-            <span className="link-label">Jump to Projects</span>
+            <span className="link-label">Jump toProjects</span>
           </InternalLink>
           <Link to="/experience" className="link">
             <PiSuitcaseSimpleLight color={COLOR} size={ICONSIZE_M} aria-hidden="true" />

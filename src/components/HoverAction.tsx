@@ -1,15 +1,13 @@
 import React from 'react';
 
-export default function HoverAction({
-  children,
-}: {
-  children: (isHovering: boolean) => React.ReactElement;
-}) {
+export const HoverContext = React.createContext<{ isHovering: boolean }>({ isHovering: false });
+
+export default function HoverAction({ children }: { children: React.ReactElement }) {
   const [isHovering, setHovering] = React.useState(false);
 
   return (
     <div onMouseEnter={() => setHovering(true)} onMouseLeave={() => setHovering(false)}>
-      {children(isHovering)}
+      <HoverContext.Provider value={{ isHovering }}>{children}</HoverContext.Provider>
     </div>
   );
 }
