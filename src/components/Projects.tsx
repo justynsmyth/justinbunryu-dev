@@ -41,7 +41,7 @@ const Projects = () => {
 
   return (
     <>
-      <div className="projects-container" id="projects">
+      <div className="projects-container">
         {/* Projects grid */}
         <div className="projects-grid">
           {filteredProjects.map((project, index) => {

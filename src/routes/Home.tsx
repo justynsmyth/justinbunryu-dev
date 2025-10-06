@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { SkillData } from '../types/types';
 
 import SectionHeader from '../components/SectionHeader';
 import Projects from '../components/Projects';
 
-import { ProjectFilterContextProvider } from '../context/ProjectFilterContext';
 import ProjectFilters from '../components/ProjectFilters';
 
 import { IoLocationOutline } from 'react-icons/io5';
@@ -13,6 +12,9 @@ import { LuLightbulb } from 'react-icons/lu';
 
 import MichiganLogo from '../assets/Block_M-Hex.png';
 import '../css/Home.css';
+
+import clsx from 'clsx';
+import skillsData from '../data/skills.json';
 
 const Home = () => {
   const helloArray = ['こんにちは', 'Hi', 'Heyo', 'Greetings', 'Hello', 'Howdy'];
@@ -51,9 +53,23 @@ const Home = () => {
     }
   }, [textIndex, currentIndex]);
 
+  const skills: SkillData[] = skillsData.skills;
+
+  const skillBubbles = skills.map((skill: SkillData, index: number) => {
+    const color = skill.color || 'golang';
+    return (
+      <button
+        key={skill.name}
+        className={clsx(`button-${color} bubble-decorative`, { active: true })}
+      >
+        {skill.name}
+      </button>
+    );
+  });
+
   /* if we decide to create projects as a route, elevate Context to layout*/
   return (
-    <ProjectFilterContextProvider>
+    <>
       <div className="page-wrapper">
         <div className="about-container">
           <SectionHeader> About Me </SectionHeader>
@@ -64,7 +80,7 @@ const Home = () => {
                 <span className="cursor">|</span>
                 <span>,</span>
               </span>
-              <span>
+              <span className="greeting-name">
                 I'm <span className="name">Justin Bunryu Smith</span>
               </span>
             </p>
@@ -80,17 +96,18 @@ const Home = () => {
             <p className="target-positions">
               <LuLightbulb className="icon" />
               Prospective Entry Level
-              <div className="target-position-bubbles">
+              <span className="target-position-bubbles">
                 <span className="highlight bubble-blue">Software Engineer</span>
                 <span className="highlight bubble-purple">Game Developer</span>
-              </div>
+              </span>
             </p>
+            <p className="skills-static">{skillBubbles}</p>
           </section>
         </div>
         <ProjectFilters />
       </div>
       <Projects />
-    </ProjectFilterContextProvider>
+    </>
   );
 };
 

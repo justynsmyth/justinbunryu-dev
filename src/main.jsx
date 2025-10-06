@@ -14,11 +14,19 @@ import './index.css';
 import Header from './components/Header';
 import Home from './routes/Home';
 import Experience from './routes/Experience';
+import { ProjectFilterContextProvider } from './context/ProjectFilterContext';
 
+/*
+ProjectFilterContext needs to be in Header since the Home button needs to be able to reset the state
+*/
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Header />,
+    element: (
+      <ProjectFilterContextProvider>
+        <Header />
+      </ProjectFilterContextProvider>
+    ),
     children: [
       { index: true, element: <Home /> },
       { path: 'experience', element: <Experience /> },

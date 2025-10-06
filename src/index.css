@@ -14,7 +14,7 @@
 
   --color-javascript: #f0db4f;
   --color-react: #61dafb;
-  --color-python: #306998;
+  --color-python: #cf2424;
   --color-cpp: #00599c;
   --color-html-css: #e34c26;
   --color-devtools: #6e5494;
@@ -29,6 +29,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --text-secondary: #000000;
 }
 
 a {

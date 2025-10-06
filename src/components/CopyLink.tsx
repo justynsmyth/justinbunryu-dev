@@ -1,19 +1,19 @@
 import React from 'react';
 
-export default function CopyLink({
-  children,
-  link,
-}: {
+interface CopyLinkProps {
   children: React.ReactElement;
   link: string;
-}) {
-  const [copied, setCopy] = React.useState(false);
+  hoverHint?: string;
+}
+
+export default function CopyLink({ children, link, hoverHint }: CopyLinkProps) {
+  const [copied, setCopied] = React.useState(false);
 
   async function handleClick() {
     try {
       await navigator.clipboard.writeText(link);
-      setCopy(true);
-      const timer: number = window.setTimeout(() => setCopy(false), 2000);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 2000);
     } catch (error) {
       console.error('Failed to copy', error);
     }
@@ -24,7 +24,7 @@ export default function CopyLink({
       <button onClick={handleClick} className="link">
         {children}
       </button>
-      <span className="email-text">{copied ? 'Copied!' : link}</span>
+      <span className="email-text">{copied ? 'Copied!' : hoverHint ?? link}</span>
     </div>
   );
 }
