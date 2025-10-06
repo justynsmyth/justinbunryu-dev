@@ -292,7 +292,7 @@
     "Handled authentication state with redirects",
     "Implemented a simple search engine using TF-IDF and PageRank algorithms"
   ],
-  "images": ["/insta4.png", "/insta2.png"]
+  "images": ["/insta3.png", "/insta2.png"]
 },
 {
   "title": "ZoeDAM: Zero-Shot Monocular Depth Perception Model",
